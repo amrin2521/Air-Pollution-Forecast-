@@ -1,63 +1,103 @@
-# Air-Pollution-Forecast-
-# 🌫️ Air Pollution Forecasting in Dhaka
 
-This project uses real meteorological data to forecast PM2.5 air pollution levels in Dhaka, Bangladesh. Using Python and linear regression, the model estimates air quality based on temperature, wind speed, and humidity.
+# 🔬 PM2.5 Prediction in Dhaka Using Linear Regression
 
----
-
-## 📌 Why This Project?
-
-Dhaka is one of the most polluted cities in the world. PM2.5 (fine particulate matter) poses serious health risks, especially in urban South Asia. This project investigates how weather factors affect PM2.5 levels using a basic predictive model. The goal is to highlight the importance of accessible air quality forecasting for urban public health.
-
----
-
-## 🧪 Methodology
-
-- **Data**: Hourly PM2.5, temperature, wind speed, and humidity (mock data used here)
-- **Model**: Linear regression with `scikit-learn`
-- **Workflow**:
-  - Preprocess data (drop missing rows)
-  - Train/test split
-  - Fit model and make predictions
-  - Plot actual vs predicted PM2.5 values
-- **Evaluation Metric**: Mean Squared Error (MSE)
-
----
-
-## 🧠 Skills Demonstrated
-
-- Exploratory data analysis (EDA)
-- Feature selection & model training
-- Scientific reasoning in environmental modeling
-- Data visualization with `matplotlib`
-- Regression modeling in `Python` using `pandas`, `sklearn`
-
----
-
-## 📊 Sample Output
-
-<img src="prediction_plot.png" width="600">
-
-The red line represents perfect predictions. The scatter points show the actual vs predicted PM2.5 levels.
+This project uses a basic machine learning model to predict **PM2.5 concentration** (fine particulate matter) in Dhaka, Bangladesh based on temporal features like **hour of the day**, **day of the week**, and **month**. It demonstrates how time patterns influence pollution levels, especially in urban environments.
 
 ---
 
 ## 📁 Folder Structure
-<pre> ## 📁 Folder Structure ``` air-pollution-dhaka/ ├── air_pollution_model.py # Python script that trains and tests the model ├── dhaka_air_quality.csv # Cleaned dataset used for regression ├── prediction_plot.png # Output plot comparing actual vs predicted PM2.5 └── README.md # Project explanation and overview ``` </pre>
+
+```
+AirPollutionDhaka/
+├── Airpollution2022.csv         # Input dataset (hourly AQI readings for Dhaka, 2022)
+├── pm25_regression.py           # Python script for modeling and visualization
+├── prediction_plot.png          # Output: scatter plot of actual vs predicted PM2.5
+└── README.md                    # Project documentation
+```
 
 ---
 
-## 📈 Next Steps
+## 📌 Project Summary
 
-- Add more advanced models (e.g., Random Forest, Ridge Regression)
-- Introduce real-time data scraping and time series analysis
-- Deploy as a web app using Streamlit to allow public predictions
-- Compare air quality across major South Asian cities
+- 📅 **Data**: Hourly PM2.5 measurements for Dhaka (2022)
+- 📈 **Goal**: Predict PM2.5 levels from time-based features
+- 🤖 **Model**: Linear Regression (using `scikit-learn`)
+- 📊 **Output**: A scatter plot comparing actual vs predicted values
+- ⚠️ **Performance**: MSE ≈ 3205.67 (room for improvement with more features)
 
 ---
 
-*Built by Amrin Sazia  
-Mathematics & Environmental Geoscience major, The College of Wooster*
+## 🔧 How It Works
+
+### Features Used:
+- `Hour`: Hour of day (0–23)
+- `DayOfWeek`: Day of the week (0=Monday, 6=Sunday)
+- `Month`: Month of the year (1–12)
+
+### Target Variable:
+- `NowCast Conc.`: PM2.5 concentration in µg/m³
+
+### Steps:
+1. Load and clean the dataset
+2. Extract datetime-based features
+3. Train-test split
+4. Train linear regression model
+5. Evaluate using Mean Squared Error (MSE)
+6. Visualize prediction results
+
+---
+
+## 📊 Results
+
+The following plot shows how well the model predicted PM2.5 concentrations:
+
+![PM2.5 Prediction Scatter Plot](prediction_plot.png)
+
+---
+
+## ▶️ How to Run
+
+1. Make sure files are organized like this:
+   ```
+   ~/Desktop/AirPollutionDhaka/Airpollution2022.csv
+   ```
+
+2. Run the script:
+   ```bash
+   python pm25_regression.py
+   ```
+
+3. The plot will be saved as `prediction_plot.png`.
+
+---
+
+## 🛠️ Requirements
+
+- Python 3.x
+- pandas
+- matplotlib
+- scikit-learn
+
+Install them using:
+
+```bash
+pip install pandas matplotlib scikit-learn
+```
+
+---
+
+## 🧠 Future Improvements
+
+- Include weather-related features (temperature, wind speed, humidity)
+- Use advanced models: Random Forest, XGBoost, or LSTM
+- Forecast future PM2.5 values
+- Deploy as an interactive web dashboard
+
+---
+
+**by Amrin Sazia**  
+
+
 
 
 
