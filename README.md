@@ -1,7 +1,7 @@
 
 # 🔬 PM2.5 Prediction in Dhaka Using Linear Regression
 
-This project uses a basic machine learning model to predict **PM2.5 concentration** (fine particulate matter) in Dhaka, Bangladesh based on temporal features like **hour of the day**, **day of the week**, and **month**. It demonstrates how time patterns influence pollution levels, especially in urban environments.
+I'm using a basic machine learning model to predict **PM2.5 concentration** (fine particulate matter) in Dhaka, Bangladesh based on temporal features like **hour of the day**, **day of the week**, and **month**. This project demonstrates how time patterns influence pollution levels, especially in urban environments.
 
 ---
 
@@ -17,17 +17,17 @@ AirPollutionDhaka/
 
 ---
 
-## 📌 Project Summary
+## Project Summary
 
-- 📅 **Data**: Hourly PM2.5 measurements for Dhaka (2022)
-- 📈 **Goal**: Predict PM2.5 levels from time-based features
-- 🤖 **Model**: Linear Regression (using `scikit-learn`)
-- 📊 **Output**: A scatter plot comparing actual vs predicted values
-- ⚠️ **Performance**: MSE ≈ 3205.67 (room for improvement with more features)
+- 📅 Data: Hourly PM2.5 measurements for Dhaka (2022)
+- 📈 Goal: Predict PM2.5 levels from time-based features
+- 🤖 Model: Linear Regression (using `scikit-learn`)
+- 📊 Output: A scatter plot comparing actual vs predicted values
+- ⚠️ Performance: MSE ≈ 3205.67 (room for improvement with more features)
 
 ---
 
-## 🔧 How It Works
+## The way it works
 
 ### Features Used:
 - `Hour`: Hour of day (0–23)
@@ -77,25 +77,6 @@ The following plot shows how well the model predicted PM2.5 concentrations:
 - pandas
 - matplotlib
 - scikit-learn
-
-Install them using:
-
-```bash
-pip install pandas matplotlib scikit-learn
-```
-
----
-
-## 🧠 Future Improvements
-
-- Include weather-related features (temperature, wind speed, humidity)
-- Use advanced models: Random Forest, XGBoost, or LSTM
-- Forecast future PM2.5 values
-- Deploy as an interactive web dashboard
-
----
-
-**by Amrin Sazia**  
 
 
 
